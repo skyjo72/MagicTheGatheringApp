@@ -20,23 +20,14 @@ class HomeHeader extends StatelessWidget {
                           alignment: Alignment.centerLeft,
                           child: FittedBox(
                             fit: BoxFit.fitHeight,
-                            child: Text('Magic the Dictionary', style:TextStyle(
-                                fontSize: 30,
-                                fontWeight: FontWeight.w400,
-                                color: Colors.deepOrangeAccent)),
-                          )
-                      ),
-                    )
-                )],
-            )
-        ),
-        Expanded(
-            flex: 1,
-            child: InkWell(
-              onTap: () {
-                HapticFeedback.mediumImpact();
-              },
-              child: const Icon(size: 40, Icons.format_size),
+                            child: Text('Magic the Dictionary',
+                                style: TextStyle(
+                                  fontSize: 30,
+                                  fontWeight: FontWeight.w400,
+                                )),
+                          )),
+                    ))
+              ],
             )),
         Expanded(
             flex: 1,
@@ -44,9 +35,16 @@ class HomeHeader extends StatelessWidget {
               onTap: () {
                 HapticFeedback.mediumImpact();
               },
-              child: const Icon(size: 40, Icons.settings),
+              child: const Icon(size: 40, Icons.format_size, color: Colors.white),
+            )),
+        Expanded(
+            flex: 1,
+            child: InkWell(
+              onTap: () {
+                HapticFeedback.mediumImpact();
+              },
+              child: const Icon(size: 40, Icons.settings, color: Colors.white),
             ))
-
       ],
     );
   }

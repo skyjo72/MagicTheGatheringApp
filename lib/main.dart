@@ -16,11 +16,10 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Magic The Dictionary',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+          primarySwatch: Colors.blue,
+          scaffoldBackgroundColor: const Color.fromRGBO(12, 15, 17, 100),
+          textTheme: const TextTheme(bodyMedium: TextStyle(color: Colors.white))),
       home: const MyHomePage(),
     );
   }
 }
-
-

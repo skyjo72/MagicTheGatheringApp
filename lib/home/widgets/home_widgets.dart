@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:magic_dictionnary_app/home/widgets/home_header_widgets.dart';
 import '../../common/navigation/navigation.dart';
+import 'home_search_widgets.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key});
@@ -11,20 +12,26 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int _selectedIndex = 0;
+
   void _onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;
     });
   }
+
   @override
   Widget build(BuildContext context) {
+    final bottomPadding = MediaQuery.of(context).padding.bottom;
     return Scaffold(
       body: SafeArea(
         child: Center(
           child: Column(
             children: const [
-              Expanded(flex:1, child: HomeHeader()),
-              Expanded(flex:7, child: Placeholder()),
+              Expanded(flex: 1, child: HomeHeader()),
+              Expanded(
+                flex: 7,
+                child: HomeSearch(),
+              ),
             ],
           ),
         ),
@@ -46,6 +53,8 @@ class _MyHomePageState extends State<MyHomePage> {
         ],
         currentIndex: _selectedIndex,
         selectedItemColor: Colors.amber[800],
+        backgroundColor: const Color.fromRGBO(125, 18, 255, 100),
+        unselectedItemColor: Colors.white,
         onTap: _onItemTapped,
       ),
     );
