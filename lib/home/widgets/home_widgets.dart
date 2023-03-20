@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:magic_dictionnary_app/favorites/favorites_widgets.dart';
 import 'package:magic_dictionnary_app/home/widgets/home_header_widgets.dart';
-import '../../common/navigation/navigation.dart';
+import '../../history/history_widgets.dart';
 import 'home_search_widgets.dart';
 
 class MyHomePage extends StatefulWidget {
@@ -19,23 +20,16 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
+  final List<Widget> _pages =[
+    HomeSearch(),
+    FavoritesPage(),
+    HistoryPage()
+  ];
+
   @override
   Widget build(BuildContext context) {
-    final bottomPadding = MediaQuery.of(context).padding.bottom;
     return Scaffold(
-      body: SafeArea(
-        child: Center(
-          child: Column(
-            children: const [
-              Expanded(flex: 1, child: HomeHeader()),
-              Expanded(
-                flex: 7,
-                child: HomeSearch(),
-              ),
-            ],
-          ),
-        ),
-      ),
+      body: _pages[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(

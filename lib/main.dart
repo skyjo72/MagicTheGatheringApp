@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'home/widgets/home_widgets.dart';
 
 void main() {
@@ -22,4 +21,8 @@ class MyApp extends StatelessWidget {
       home: const MyHomePage(),
     );
   }
+}
+
+class MyAppState extends ChangeNotifier {
+ // To do
 }

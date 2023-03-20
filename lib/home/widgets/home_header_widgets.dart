@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:magic_dictionnary_app/settings/settings_widgets.dart';
 
 class HomeHeader extends StatelessWidget {
   const HomeHeader({Key? key}) : super(key: key);
@@ -34,6 +35,7 @@ class HomeHeader extends StatelessWidget {
             child: InkWell(
               onTap: () {
                 HapticFeedback.mediumImpact();
+
               },
               child: const Icon(size: 40, Icons.format_size, color: Colors.white),
             )),
@@ -42,6 +44,10 @@ class HomeHeader extends StatelessWidget {
             child: InkWell(
               onTap: () {
                 HapticFeedback.mediumImpact();
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const SettingsPage()),
+                );
               },
               child: const Icon(size: 40, Icons.settings, color: Colors.white),
             ))
