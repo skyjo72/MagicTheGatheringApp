@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:magic_dictionnary_app/favorites/favorites_widgets.dart';
-import 'package:magic_dictionnary_app/home/widgets/home_header_widgets.dart';
 import '../../history/history_widgets.dart';
 import 'home_search_widgets.dart';
 

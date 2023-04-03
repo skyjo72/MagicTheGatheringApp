@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'common/models/word_model.dart';
 import 'home/widgets/home_widgets.dart';
 
 void main() {
@@ -17,12 +18,13 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
           primarySwatch: Colors.blue,
           scaffoldBackgroundColor: const Color.fromRGBO(12, 15, 17, 100),
-          textTheme: const TextTheme(bodyMedium: TextStyle(color: Colors.white))),
+          textTheme: const TextTheme(
+              bodyMedium: TextStyle(color: Colors.white))),
       home: const MyHomePage(),
     );
   }
 }
 
 class MyAppState extends ChangeNotifier {
- // To do
+  //To do favorite and history
 }
